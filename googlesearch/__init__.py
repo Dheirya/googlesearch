@@ -168,7 +168,7 @@ def get_page(url, user_agent=None, verify_ssl=True):
     if user_agent is None:
         user_agent = USER_AGENT
     request = Request(url)
-    request.add_header('User-Agent', user_agent)
+    request.add_header('User-Agent', 'Googlebot')
     cookie_jar.add_cookie_header(request)
     if verify_ssl:
         response = urlopen(request)
